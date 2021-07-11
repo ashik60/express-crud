@@ -5,7 +5,6 @@ const router = require('./routes');
 require('dotenv').config();
 
 const uri = process.env.uri;
-console.log(uri);
 
 const app = express();
 
@@ -28,7 +27,7 @@ mongoose
   })
   .then(() => {
     app.listen(port, () => {
-      console.log(`Running on port ${port}`);
+      console.log(`Running on http://localhost:${port}`);
     });
   })
   .catch((e) => {
